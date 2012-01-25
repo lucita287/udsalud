@@ -14,7 +14,7 @@
 <script src="lib/jcarousellite_1.0.1c4.js" type="text/javascript"></script>
 
 
-<script>
+	<script>
 
 	$(function() {
 	$(".jCarouselLite1").jCarouselLite({
@@ -25,13 +25,27 @@
 		scroll:1
 		});
 	});
+	$(function() {
+		$( "#selectable" ).selectable();
+	});
     </script>
 	<style type="text/css">
+		#header_carousel { float:right; }
 		.news-inicio{	width:100%; height:100px;	}
 		.news-picture{ width:15%; float:left; }
 		.news-text { width:85%;  float:left; }
 		.menu-servicio {	background:#EAF4F5; margin: 0; padding: 0.4em; text-align: center;}
-        </style>
+		#menu-principal {  width:25%;  float:left; }
+		#noticias {width:60%; float:left; }
+		#feedback { font-size: 1.4em; }
+		#selectable .ui-selecting { background: #FECA40; }
+		#selectable .ui-selected { background: #F39814; color: white; }
+		#selectable { list-style-type: none; margin: 0; padding: 0; }
+		#selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; }
+		#Panel-inicio { width:90%;  padding: 0.4em; background: #fff; }
+		#tabs1-inicio {float:left; }
+		#tabs1-inicio h3 { margin: 0; padding: 0.4em; text-align: center; }
+     </style>
 
 </head>
 <body>
@@ -42,20 +56,17 @@
         <div id="white_bg_top"></div>
         <div id="white_bg">
 	
-	
+	<div id="header_carousel">
 	<div class="jCarouselLite1">
 
 									<ul>
 
 										<li>
 										<div class="news-inicio" >
-												<div class="news-picture" >
-													<img src="images/news.png" width="32px" height="32px"/>
-												</div>
+												
 												<div class="news-text">
-												<b>*EXAMEN DE SALUD PENDIENTE PARA INSCRIBIRME EN EL 2012</b> 
-												<br/>Si no realizaste el Examen de Salud durante el año 2011, requisito para inscribirte en el año 2012.
-												<br/>Asiste a la Unidad de Salud, Edificio Bienestar Estudiantil 3er Nivel	
+													<img src="images/fotos/1.jpg" width="120px" height="120px" />												
+	
 												</div>
 										</div>
 										<div style="clear: both;"></div>
@@ -63,12 +74,10 @@
 										
 										<li>
 										<div class="news-inicio"  >	
-												<div class="news-picture" >
-													<img src="images/news.png" width="32px" height="32px"/>
-												</div>
+												
 												<div class="news-text">
-												<b>TALLERES DE DESARROLLO PERSONAL</b> 
-												<br/>Octubre 2011 	
+												<img src="images/fotos/2.png" width="120px" height="120px" />												
+
 												</div>
 										</div>
 										<div style="clear: both;"></div>
@@ -76,25 +85,18 @@
 										
 										<li>
 										<div class="news-inicio"  >
-												<div class="news-picture" >
-													<img src="images/news.png" width="32px" height="32px"/>
-												</div>
+												
 												<div class="news-text">
-												<b>3a. FERIA DE LA SALUD</b> 
-												<br/>A realizarse enfrente del edificio de Bienestar Estudiantil	
+												<img src="images/fotos/3.png" width="120px" height="120px" />
 												</div>
 										</div>		
 										<div  style="clear: both;"></div>
 										</li>
 										<li>
 										<div class="news-inicio"  >
-												<div class="news-picture" >
-													<img src="images/news.png" width="32px" height="32px"/>
-												</div>
+												
 												<div class="news-text">
-												<b>*UNIVERISTARIO HAZTE LA PRUEBA DE VIH</b> 
-												<br/>No Importa quien seas hazte la prueba de VIH</br>
-												En facultades de agronomía, derecho etc	
+												<img src="images/fotos/4.png" width="120px" height="120px" />
 												</div>
 										</div>		
 										<div style="clear: both;"></div>
@@ -110,11 +112,66 @@ Unidad de Salud
 	
 	
 			
-        </div>	
+    
+    </div>	
+<div style="clear: both;"></div>
+        
+<div id="menu-principal" >
 
-            
+<ol id="selectable">
+	<li class="ui-widget-content">Item 1</li>
+	<li class="ui-widget-content">Item 2</li>
+	<li class="ui-widget-content">Item 3</li>
+	<li class="ui-widget-content">Item 4</li>
+	<li class="ui-widget-content">Item 5</li>
+	<li class="ui-widget-content">Item 6</li>
+	<li class="ui-widget-content">Item 7</li>
+</ol>
+
+</div>
+<div id="noticias">
+				<div class="tabs1-inicio">
+						
+								<div class="toggler">
+									<div id="Panel-inicio" class="ui-widget-content ui-corner-all">
+									
+										<h3 class="ui-widget-header ui-corner-all">Ingreso</h3>
+										<br/>
+										<table>
+										<tr>
+											<td>
+											Usuario
+											</td>
+											<td>
+											<input type="text" value="" size="20">
+											</td>
+										</tr>
+										<tr>
+											<td>
+											Contraseña
+											</td>
+											<td>
+											<input type="password" value="" size="20">
+											</td>
+										</tr>
+										</table>
+										<br/>
+											<center><a href="#" id="button" class="ui-state-default ui-corner-all">Entrar</a></center>
+										<br/>		
+										<hr />
+										<center>
+										<br/><a href="#">¿Olvid&oacute; su contraseña?</a>
+										<br/><a href="#">Obtener Usuario</a>
+										</center>
+									</div>
+								</div>
+						</div>
+
+</div>            
         <div id="white_bg_bot"></div>
-    	
+    </div>
+    
+    </div>	
 		<div id="footer_bot">
 			<p>USAC 2012, Unidad de Salud </p>
 		</div>
